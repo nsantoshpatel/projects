@@ -8,16 +8,16 @@ except ImportError as e:
 
 class notify_linux(object):
     def __init__(self):
-        print('inside linux notification class')
+        print("{}::{}".format('notify_linux', '__init__'))
 
-    def popup(self, title, msg, icon="red.ico", wait=5):
-        print('show')
+    def popup(self, title, msg, icon="red.ico", wait=None):
+        print("{}::{}".format('notify_linux', 'popup'))
 
     def close(self):
-        print('close')
+        print("{}::{}".format('notify_linux', 'close'))
 
 if __name__ == '__main__':
     print('Executing py file directly')
     notify = notify_linux()
-    notify.popup('Header','Body of the PopUP',wait=10)
+    notify.popup('Header','Body of the PopUP', wait=10)
     notify.close()
