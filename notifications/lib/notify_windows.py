@@ -1,5 +1,7 @@
+import os
+import sys
+import time
 print('Import Windows OS notifications modules: win32gui, win32api, win32con')
-import os, sys, time
 try:
     from win32api import *
     from win32gui import *
@@ -53,6 +55,7 @@ class notify_windows(object):
         else:
             time.sleep(wait)
             self.close()
+        return None
 
     def close(self):
         # while True:
